@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FinalImageViewController.h
 //  WaterMark
 //
 //  Created by fab3 on 29/11/14.
@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController{
+@interface FinalImageViewController : UIViewController{
+    
     IBOutlet UIImageView *imgView;
 }
 
-
+@property(nonatomic,retain) UIImage *finalImage;
 @end
-

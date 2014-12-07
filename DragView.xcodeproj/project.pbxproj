@@ -14,6 +14,13 @@
 		A346CBBA1A347C7D005D2A10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A346CBB91A347C7D005D2A10 /* Images.xcassets */; };
 		A346CBBD1A347C7D005D2A10 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A346CBBB1A347C7D005D2A10 /* LaunchScreen.xib */; };
 		A346CBC91A347C7D005D2A10 /* DragViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A346CBC81A347C7D005D2A10 /* DragViewTests.m */; };
+		A346CBDC1A347C93005D2A10 /* resize.png in Resources */ = {isa = PBXBuildFile; fileRef = A346CBD21A347C93005D2A10 /* resize.png */; };
+		A346CBDD1A347C93005D2A10 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = A346CBD31A347C93005D2A10 /* close.png */; };
+		A346CBDE1A347C93005D2A10 /* Document.png in Resources */ = {isa = PBXBuildFile; fileRef = A346CBD41A347C93005D2A10 /* Document.png */; };
+		A346CBDF1A347C93005D2A10 /* DragbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A346CBD61A347C93005D2A10 /* DragbleView.m */; };
+		A346CBE01A347C93005D2A10 /* BorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A346CBD81A347C93005D2A10 /* BorderView.m */; };
+		A346CBE11A347C93005D2A10 /* FinalImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A346CBDA1A347C93005D2A10 /* FinalImageViewController.m */; };
+		A346CBE21A347C93005D2A10 /* FinalImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A346CBDB1A347C93005D2A10 /* FinalImageViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +47,16 @@
 		A346CBC21A347C7D005D2A10 /* DragViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A346CBC71A347C7D005D2A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A346CBC81A347C7D005D2A10 /* DragViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragViewTests.m; sourceTree = "<group>"; };
+		A346CBD21A347C93005D2A10 /* resize.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resize.png; sourceTree = "<group>"; };
+		A346CBD31A347C93005D2A10 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		A346CBD41A347C93005D2A10 /* Document.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Document.png; sourceTree = "<group>"; };
+		A346CBD51A347C93005D2A10 /* DragbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragbleView.h; sourceTree = "<group>"; };
+		A346CBD61A347C93005D2A10 /* DragbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragbleView.m; sourceTree = "<group>"; };
+		A346CBD71A347C93005D2A10 /* BorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderView.h; sourceTree = "<group>"; };
+		A346CBD81A347C93005D2A10 /* BorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderView.m; sourceTree = "<group>"; };
+		A346CBD91A347C93005D2A10 /* FinalImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalImageViewController.h; sourceTree = "<group>"; };
+		A346CBDA1A347C93005D2A10 /* FinalImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalImageViewController.m; sourceTree = "<group>"; };
+		A346CBDB1A347C93005D2A10 /* FinalImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinalImageViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +98,16 @@
 		A346CBAB1A347C7D005D2A10 /* DragView */ = {
 			isa = PBXGroup;
 			children = (
+				A346CBD21A347C93005D2A10 /* resize.png */,
+				A346CBD31A347C93005D2A10 /* close.png */,
+				A346CBD41A347C93005D2A10 /* Document.png */,
+				A346CBD51A347C93005D2A10 /* DragbleView.h */,
+				A346CBD61A347C93005D2A10 /* DragbleView.m */,
+				A346CBD71A347C93005D2A10 /* BorderView.h */,
+				A346CBD81A347C93005D2A10 /* BorderView.m */,
+				A346CBD91A347C93005D2A10 /* FinalImageViewController.h */,
+				A346CBDA1A347C93005D2A10 /* FinalImageViewController.m */,
+				A346CBDB1A347C93005D2A10 /* FinalImageViewController.xib */,
 				A346CBB01A347C7D005D2A10 /* AppDelegate.h */,
 				A346CBB11A347C7D005D2A10 /* AppDelegate.m */,
 				A346CBB31A347C7D005D2A10 /* ViewController.h */,
@@ -199,9 +226,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A346CBE21A347C93005D2A10 /* FinalImageViewController.xib in Resources */,
 				A346CBB81A347C7D005D2A10 /* Main.storyboard in Resources */,
 				A346CBBD1A347C7D005D2A10 /* LaunchScreen.xib in Resources */,
+				A346CBDE1A347C93005D2A10 /* Document.png in Resources */,
 				A346CBBA1A347C7D005D2A10 /* Images.xcassets in Resources */,
+				A346CBDD1A347C93005D2A10 /* close.png in Resources */,
+				A346CBDC1A347C93005D2A10 /* resize.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A346CBDF1A347C93005D2A10 /* DragbleView.m in Sources */,
+				A346CBE11A347C93005D2A10 /* FinalImageViewController.m in Sources */,
 				A346CBB51A347C7D005D2A10 /* ViewController.m in Sources */,
+				A346CBE01A347C93005D2A10 /* BorderView.m in Sources */,
 				A346CBB21A347C7D005D2A10 /* AppDelegate.m in Sources */,
 				A346CBAF1A347C7D005D2A10 /* main.m in Sources */,
 			);
