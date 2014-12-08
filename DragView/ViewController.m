@@ -168,21 +168,53 @@
     [dragView setNeedsDisplay];
     
     UIImage *dragImage = [self imageWithView:dragView];
-    UIGraphicsBeginImageContextWithOptions(imgView.image.size, NO, 0.0);
+    CGFloat imageScale = imgView.contentScaleFactor;
+    NSLog(@"%f",dragView.frame.origin.y- imgView.frame.origin.y);
     
+    UIImage *fImage = [self addToImage:imgView.image newImage:dragImage atPoint:CGPointMake(dragView.center.x * 0.5 , (dragView.frame.origin.y- imgView.frame.origin.y) *0.5) transform:dragView.transform];
     
-    UIImage *mainImage = [self imageWithView:imgView];
-    [mainImage drawInRect:CGRectMake(0, 0, imgView.image.size.width, imgView.image.size.height)];
-    [dragImage drawAtPoint:CGPointMake(dragView.center.x, dragView.center.y - imgView.frame.origin.y)];
-    [dragView editingchange];
-    
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
+    /*
+     UIGraphicsBeginImageContextWithOptions(imgView.image.size, NO, 0.0);
+     
+     
+     UIImage *mainImage = [self imageWithView:imgView];
+     [mainImage drawInRect:CGRectMake(0, 0, imgView.image.size.width, imgView.image.size.height)];
+     [dragImage drawAtPoint:CGPointMake(dragView.center.x, dragView.center.y - imgView.frame.origin.y)];
+     [dragView editingchange];
+     
+     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+     */
     FinalImageViewController *objVc =[[FinalImageViewController alloc]init];
-    objVc.finalImage =newImage;
+    objVc.finalImage =fImage;
     [self.navigationController pushViewController:objVc animated:YES];
     
     
+}
+- (UIImage*)addToImage:(UIImage *)baseImage newImage:(UIImage*)newImage atPoint:(CGPoint)point transform:(CGAffineTransform)transform {
+    
+    UIGraphicsBeginImageContextWithOptions(baseImage.size, NO, [[UIScreen mainScreen] scale]);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGRect baseRect = CGRectMake(0, 0, baseImage.size.width, baseImage.size.height);
+    
+    [baseImage drawInRect:baseRect];
+    
+    
+    CGRect newRect = CGRectMake(point.x , point.y  , newImage.size.width  * 2, newImage.size.height  * 2);
+    
+    float xTranslation = point.x + newRect.size.width/2;;
+    float yTranslation = point.y+newRect.size.height/2;
+    
+    CGContextTranslateCTM(context, xTranslation, yTranslation);
+    CGContextConcatCTM(context, transform);
+    CGContextTranslateCTM(context, -xTranslation, -yTranslation);
+    [newImage drawInRect:newRect];
+    
+    
+    UIImage* result = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return result;
 }
 - (UIImage *) imageWithView:(UIView *)view
 {
